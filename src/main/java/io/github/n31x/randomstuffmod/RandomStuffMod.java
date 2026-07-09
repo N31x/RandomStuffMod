@@ -1,5 +1,6 @@
 package io.github.n31x.randomstuffmod;
 
+import io.github.n31x.randomstuffmod.creativemodetab.ModCreativeModeTabs;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -46,7 +47,10 @@ public class RandomStuffMod {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (RandomStuffMod) to respond directly to events.

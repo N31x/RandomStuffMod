@@ -1,3 +1,5 @@
 {
-  "item.randomstuffmod.lead_ingot": "Lead Ingot"
+  "item.randomstuffmod.lead_ingot": "Lead Ingot",
+  "creativetab.randomstuffmod.items": "Random Stuff Mod Items",
+  "creativetab.randomstuffmod.blocks": "Random Stuff Mod Blocks"
 }
