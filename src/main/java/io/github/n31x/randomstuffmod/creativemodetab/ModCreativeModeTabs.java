@@ -1,6 +1,7 @@
 package io.github.n31x.randomstuffmod.creativemodetab;
 
 import io.github.n31x.randomstuffmod.RandomStuffMod;
+import io.github.n31x.randomstuffmod.block.ModBlocks;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -26,10 +27,10 @@ public class ModCreativeModeTabs {
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.LEAD_INGOT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.RAW_LEAD_BLOCk.get()))
                     .title(Component.translatable("creativetab.randomstuffmod.blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
-
+                        output.accept(ModBlocks.RAW_LEAD_BLOCk);
                     }).build());
 
     public static void register(IEventBus eventBus) {

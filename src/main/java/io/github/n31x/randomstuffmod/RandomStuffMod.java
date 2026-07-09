@@ -1,5 +1,6 @@
 package io.github.n31x.randomstuffmod;
 
+import io.github.n31x.randomstuffmod.block.ModBlocks;
 import io.github.n31x.randomstuffmod.creativemodetab.ModCreativeModeTabs;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import org.slf4j.Logger;
@@ -50,7 +51,7 @@ public class RandomStuffMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
-
+        ModBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (RandomStuffMod) to respond directly to events.
@@ -69,9 +70,6 @@ public class RandomStuffMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.LEAD_INGOT);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

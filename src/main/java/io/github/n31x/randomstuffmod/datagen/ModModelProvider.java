@@ -2,6 +2,7 @@ package io.github.n31x.randomstuffmod.datagen;
 
 import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.RandomStuffModDataGen;
+import io.github.n31x.randomstuffmod.block.ModBlocks;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -18,5 +19,12 @@ public class ModModelProvider extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         itemModels.generateFlatItem(ModItems.LEAD_INGOT.get(), ModelTemplates.FLAT_ITEM);
+
+
+
+
+        /* BLOCKS */
+        blockModels.createTrivialCube(ModBlocks.RAW_LEAD_BLOCk.get());
     }
+
 }
