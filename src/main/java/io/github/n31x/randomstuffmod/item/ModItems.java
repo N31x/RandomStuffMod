@@ -10,6 +10,8 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(RandomStuffMod.MOD_ID);
 
     public static final DeferredItem<Item> LEAD_INGOT = ITEMS.registerSimpleItem("lead_ingot");
+    public static final DeferredItem<Item> RAW_LEAD = ITEMS.registerSimpleItem("raw_lead");
+
 
 
     public static void register(IEventBus eventBus) {

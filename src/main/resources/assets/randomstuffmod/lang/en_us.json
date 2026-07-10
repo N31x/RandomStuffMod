@@ -1,6 +1,8 @@
 {
   "item.randomstuffmod.lead_ingot": "Lead Ingot",
+  "item.randomstuffmod.raw_lead": "Raw Lead",
   "block.randomstuffmod.raw_lead_block": "Block of Raw Lead",
+  "block.randomstuffmod.lead_ore": "Lead Ore",
   "creativetab.randomstuffmod.items": "Random Stuff Mod Items",
   "creativetab.randomstuffmod.blocks": "Random Stuff Mod Blocks"
 }

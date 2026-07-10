@@ -19,12 +19,14 @@ public class ModModelProvider extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         itemModels.generateFlatItem(ModItems.LEAD_INGOT.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.RAW_LEAD.get(), ModelTemplates.FLAT_ITEM);
 
 
 
 
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.RAW_LEAD_BLOCk.get());
+        blockModels.createTrivialCube(ModBlocks.LEAD_ORE.get());
     }
 
 }

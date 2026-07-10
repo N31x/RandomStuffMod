@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                     .withTabsAfter(Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "randomstuffmod_blocks_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LEAD_INGOT);
+                        output.accept(ModItems.RAW_LEAD);
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_blocks_tab",
@@ -31,6 +32,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.randomstuffmod.blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.RAW_LEAD_BLOCk);
+                        output.accept(ModBlocks.LEAD_ORE);
                     }).build());
 
     public static void register(IEventBus eventBus) {
