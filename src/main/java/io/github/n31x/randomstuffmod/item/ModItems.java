@@ -3,10 +3,16 @@ package io.github.n31x.randomstuffmod.item;
 import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.food.ModFoods;
 import io.github.n31x.randomstuffmod.item.custom.MetalDetectorItem;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Consumer;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(RandomStuffMod.MOD_ID);
@@ -20,7 +26,13 @@ public class ModItems {
             properties -> new MetalDetectorItem(properties.durability(64)));
 
     public static final DeferredItem<Item> CORN = ITEMS.registerItem("corn",
-            properties -> new Item(properties.food(ModFoods.CORN, ModFoods.CORN_CONSUMABLE)));
+            properties -> new Item(properties.food(ModFoods.CORN, ModFoods.CORN_CONSUMABLE)) {
+                @Override
+                public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+                    builder.accept(Component.translatable("tooltip.randomstuffmod.corn"));
+                    super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> NETHER_COAL = ITEMS.registerItem("nether_coal",
             properties -> new Item(properties.fireResistant()));

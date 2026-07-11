@@ -3,7 +3,11 @@ package io.github.n31x.randomstuffmod.block;
 import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.block.custom.MagicBlock;
 import io.github.n31x.randomstuffmod.item.ModItems;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -11,6 +15,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class ModBlocks {
@@ -31,7 +36,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
             properties -> new MagicBlock(properties.strength(2f)
-                    .sound(SoundType.AMETHYST)));
+                    .sound(SoundType.AMETHYST)), Component.translatable("tooltip.randomstuffmod.magic_block"));
 
     public static final DeferredBlock<Block> NETHER_COAL_BLOCK = registerFireResistantBlock("nether_coal_block",
             properties -> new Block(properties.strength(3f)
@@ -48,14 +53,32 @@ public class ModBlocks {
         return toReturn;
     }
 
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
+        ModItems.ITEMS.registerItem(name, (properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix())));
+    }
+
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function, Component... components) {
+        DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
+        registerBlockItem(name, toReturn, components);
+        return toReturn;
+    }
+
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block, Component... components) {
+        ModItems.ITEMS.registerItem(name, (properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix()) {
+            @Override
+            public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+                for(var component : components) {
+                    builder.accept(component);
+                }
+                super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+            }
+        }));
+    }
+
     private static <T extends Block> DeferredBlock<T> registerFireResistantBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
         registerFireResistantBlockItem(name, toReturn);
         return toReturn;
-    }
-
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.registerItem(name, (properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix())));
     }
 
     private static <T extends Block> void registerFireResistantBlockItem(String name, DeferredBlock<T> block) {

@@ -14,5 +14,9 @@
   "block.randomstuffmod.nether_coal_ore": "Nether Coal Ore",
   "creativetab.randomstuffmod.items": "Random Stuff Mod Items",
   "creativetab.randomstuffmod.blocks": "Random Stuff Mod Blocks",
-  "item.randomstuffmod.metal_detector.no_valuables": "No Valuables Found"
+  "item.randomstuffmod.metal_detector.no_valuables": "No Valuables Found",
+  "tooltip.randomstuffmod.metal_detector": "Press §eShift§r for more information",
+  "tooltip.randomstuffmod.magic_block": "Try throwing valuables on it",
+  "tooltip.randomstuffmod.corn": "it's CORN!",
+  "tooltip.randomstuffmod.metal_detector.shift_down": "Use on a block to check if there are any ores up to 64 blocks below it."
 }
