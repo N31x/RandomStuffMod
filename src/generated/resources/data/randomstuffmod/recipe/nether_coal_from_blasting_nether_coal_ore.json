@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "nether_coal",
+  "ingredient": "randomstuffmod:nether_coal_ore",
+  "result": {
+    "id": "randomstuffmod:nether_coal"
+  }
+}

@@ -29,6 +29,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RED_PAPER);
                         output.accept(ModItems.METAL_DETECTOR);
                         output.accept(ModItems.CORN);
+                        output.accept(ModItems.NETHER_COAL);
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_blocks_tab",
@@ -39,6 +40,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LEAD_ORE);
                         output.accept(ModBlocks.DEEPSLATE_LEAD_ORE);
                         output.accept(ModBlocks.MAGIC_BLOCK);
+                        output.accept(ModBlocks.NETHER_COAL_BLOCK);
+                        output.accept(ModBlocks.NETHER_COAL_ORE);
                     }).build());
 
     public static void register(IEventBus eventBus) {

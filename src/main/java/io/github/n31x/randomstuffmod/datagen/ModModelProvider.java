@@ -24,6 +24,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.RED_PAPER.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.METAL_DETECTOR.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.CORN.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.NETHER_COAL.get(), ModelTemplates.FLAT_ITEM);
 
 
 
@@ -33,6 +34,8 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.LEAD_ORE.get());
         blockModels.createTrivialCube(ModBlocks.DEEPSLATE_LEAD_ORE.get());
         blockModels.createTrivialCube(ModBlocks.MAGIC_BLOCK.get());
+        blockModels.createTrivialCube(ModBlocks.NETHER_COAL_BLOCK.get());
+        blockModels.createTrivialCube(ModBlocks.NETHER_COAL_ORE.get());
     }
 
 }

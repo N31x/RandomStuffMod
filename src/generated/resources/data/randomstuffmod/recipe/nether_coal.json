@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "nether_coal",
+  "ingredients": [
+    "randomstuffmod:nether_coal_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "randomstuffmod:nether_coal"
+  }
+}

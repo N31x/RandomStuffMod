@@ -22,6 +22,9 @@ public class ModItems {
     public static final DeferredItem<Item> CORN = ITEMS.registerItem("corn",
             properties -> new Item(properties.food(ModFoods.CORN, ModFoods.CORN_CONSUMABLE)));
 
+    public static final DeferredItem<Item> NETHER_COAL = ITEMS.registerItem("nether_coal",
+            properties -> new Item(properties.fireResistant()));
+
 
 
     public static void register(IEventBus eventBus) {

@@ -2,6 +2,8 @@
   "values": [
     "randomstuffmod:raw_lead_block",
     "randomstuffmod:lead_ore",
-    "randomstuffmod:deepslate_lead_ore"
+    "randomstuffmod:deepslate_lead_ore",
+    "randomstuffmod:nether_coal_block",
+    "randomstuffmod:nether_coal_ore"
   ]
 }

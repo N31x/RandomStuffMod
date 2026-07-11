@@ -1,9 +1,6 @@
 package io.github.n31x.randomstuffmod;
 
-import io.github.n31x.randomstuffmod.datagen.ModBlockLootTableProvider;
-import io.github.n31x.randomstuffmod.datagen.ModBlockTagsProvider;
-import io.github.n31x.randomstuffmod.datagen.ModModelProvider;
-import io.github.n31x.randomstuffmod.datagen.ModRecipeProvider;
+import io.github.n31x.randomstuffmod.datagen.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -30,5 +27,6 @@ public class RandomStuffModDataGen {
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
 
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
+        generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
     }
 }

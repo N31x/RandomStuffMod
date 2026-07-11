@@ -33,6 +33,14 @@ public class ModBlocks {
             properties -> new MagicBlock(properties.strength(2f)
                     .sound(SoundType.AMETHYST)));
 
+    public static final DeferredBlock<Block> NETHER_COAL_BLOCK = registerFireResistantBlock("nether_coal_block",
+            properties -> new Block(properties.strength(3f)
+                    .sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> NETHER_COAL_ORE = registerBlock("nether_coal_ore",
+            properties -> new Block(properties.strength(3f)
+                    .sound(SoundType.NETHER_ORE)));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
@@ -40,8 +48,18 @@ public class ModBlocks {
         return toReturn;
     }
 
+    private static <T extends Block> DeferredBlock<T> registerFireResistantBlock(String name, Function<BlockBehaviour.Properties, T> function) {
+        DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
+        registerFireResistantBlockItem(name, toReturn);
+        return toReturn;
+    }
+
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.registerItem(name, (properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix())));
+    }
+
+    private static <T extends Block> void registerFireResistantBlockItem(String name, DeferredBlock<T> block) {
+        ModItems.ITEMS.registerItem(name, (properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix().fireResistant())));
     }
 
 

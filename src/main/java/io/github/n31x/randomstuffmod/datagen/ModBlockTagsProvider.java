@@ -19,13 +19,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.RAW_LEAD_BLOCk.get())
                 .add(ModBlocks.LEAD_ORE.get())
-                .add(ModBlocks.DEEPSLATE_LEAD_ORE.get());
+                .add(ModBlocks.DEEPSLATE_LEAD_ORE.get())
+                .add(ModBlocks.NETHER_COAL_BLOCK.get())
+                .add(ModBlocks.NETHER_COAL_ORE.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.RAW_LEAD_BLOCk.get());
+                .add(ModBlocks.RAW_LEAD_BLOCk.get())
+                .add(ModBlocks.NETHER_COAL_BLOCK.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.LEAD_ORE.get())
-                .add(ModBlocks.DEEPSLATE_LEAD_ORE.get());
+                .add(ModBlocks.DEEPSLATE_LEAD_ORE.get())
+                .add(ModBlocks.NETHER_COAL_ORE.get());
     }
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "randomstuffmod:block/nether_coal_block"
+    }
+  }
+}

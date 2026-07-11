@@ -56,6 +56,21 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("lead")
                 .save(output);
 
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHER_COAL_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.NETHER_COAL.get())
+                .unlockedBy(getHasName(ModItems.NETHER_COAL.get()), has(ModItems.NETHER_COAL))
+                .group("nether_coal")
+                .save(output);
+
+        shapeless(RecipeCategory.MISC, ModItems.NETHER_COAL.get(), 9)
+                .requires(ModBlocks.NETHER_COAL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.NETHER_COAL_BLOCK.get()), has(ModBlocks.NETHER_COAL_BLOCK))
+                .group("nether_coal")
+                .save(output);
+
         shaped(RecipeCategory.MISC, ModItems.LEAD_INGOT.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -82,13 +97,16 @@ public class ModRecipeProvider extends RecipeProvider {
         List<ItemLike> LEAD_SMELTABLES = List.of(ModItems.RAW_LEAD,
                 ModBlocks.LEAD_ORE, ModBlocks.DEEPSLATE_LEAD_ORE);
 
+        List<ItemLike> NETHER_COAL_SMELTABLES = List.of(ModBlocks.NETHER_COAL_ORE);
+
         oreSmelting(LEAD_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.LEAD_INGOT.get(), 0.25f, 200, "lead");
         oreBlasting(LEAD_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.LEAD_INGOT.get(), 0.25f, 100, "lead");
+        oreSmelting(NETHER_COAL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.NETHER_COAL.get(), 0.25f, 200, "nether_coal");
+        oreBlasting(NETHER_COAL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.NETHER_COAL.get(), 0.25f, 100, "nether_coal");
     }
 
     @Override
     protected <T extends AbstractCookingRecipe> void oreCooking(AbstractCookingRecipe.Factory<T> factory, List<ItemLike> smeltables, RecipeCategory craftingCategory, CookingBookCategory cookingCategory, ItemLike result, float experience, int cookingTime, String group, String fromDesc) {
-
         for(ItemLike itemLike : smeltables) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemLike), craftingCategory, cookingCategory, result, experience, cookingTime, factory).group(group).unlockedBy(getHasName(itemLike), has(itemLike))
                     .save(output, RandomStuffMod.MOD_ID + ":" + getItemName(result) + fromDesc + "_" + getItemName(itemLike));

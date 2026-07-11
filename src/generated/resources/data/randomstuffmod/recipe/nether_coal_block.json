@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "nether_coal",
+  "key": {
+    "A": "randomstuffmod:nether_coal"
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "id": "randomstuffmod:nether_coal_block"
+  }
+}

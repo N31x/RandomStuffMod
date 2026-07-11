@@ -1,0 +1,10 @@
+{
+  "values": {
+    "randomstuffmod:nether_coal": {
+      "burn_time": 3200
+    },
+    "randomstuffmod:nether_coal_block": {
+      "burn_time": 32000
+    }
+  }
+}
