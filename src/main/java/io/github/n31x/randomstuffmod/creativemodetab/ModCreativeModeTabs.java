@@ -37,6 +37,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_LEAD_BLOCk);
                         output.accept(ModBlocks.LEAD_ORE);
                         output.accept(ModBlocks.DEEPSLATE_LEAD_ORE);
+                        output.accept(ModBlocks.MAGIC_BLOCK);
                     }).build());
 
     public static void register(IEventBus eventBus) {

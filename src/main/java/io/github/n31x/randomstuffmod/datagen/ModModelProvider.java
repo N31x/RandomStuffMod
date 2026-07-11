@@ -31,6 +31,7 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.RAW_LEAD_BLOCk.get());
         blockModels.createTrivialCube(ModBlocks.LEAD_ORE.get());
         blockModels.createTrivialCube(ModBlocks.DEEPSLATE_LEAD_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.MAGIC_BLOCK.get());
     }
 
 }

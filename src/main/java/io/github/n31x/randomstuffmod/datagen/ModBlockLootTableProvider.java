@@ -18,6 +18,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.RAW_LEAD_BLOCk.get());
+        dropSelf(ModBlocks.MAGIC_BLOCK.get());
 
         add(ModBlocks.LEAD_ORE.get(),
                 createOreDrop(ModBlocks.LEAD_ORE.get(), ModItems.RAW_LEAD.get()));

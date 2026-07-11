@@ -1,6 +1,7 @@
 package io.github.n31x.randomstuffmod.block;
 
 import io.github.n31x.randomstuffmod.RandomStuffMod;
+import io.github.n31x.randomstuffmod.block.custom.MagicBlock;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
@@ -27,6 +28,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DEEPSLATE_LEAD_ORE = registerBlock("deepslate_lead_ore",
             properties -> new Block(properties.strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            properties -> new MagicBlock(properties.strength(2f)
+                    .sound(SoundType.AMETHYST)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
