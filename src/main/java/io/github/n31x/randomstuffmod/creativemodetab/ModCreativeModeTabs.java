@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_LEAD);
                         output.accept(ModItems.LEAD_NUGGET);
                         output.accept(ModItems.RED_PAPER);
+                        output.accept(ModItems.METAL_DETECTOR);
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_blocks_tab",

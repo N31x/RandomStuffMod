@@ -3,9 +3,11 @@
   "item.randomstuffmod.raw_lead": "Raw Lead",
   "item.randomstuffmod.lead_nugget": "Lead Nugget",
   "item.randomstuffmod.red_paper": "Red Paper",
+  "item.randomstuffmod.metal_detector": "Metal Detector",
   "block.randomstuffmod.raw_lead_block": "Block of Raw Lead",
   "block.randomstuffmod.lead_ore": "Lead Ore",
   "block.randomstuffmod.deepslate_lead_ore": "Deepslate Lead Ore",
   "creativetab.randomstuffmod.items": "Random Stuff Mod Items",
-  "creativetab.randomstuffmod.blocks": "Random Stuff Mod Blocks"
+  "creativetab.randomstuffmod.blocks": "Random Stuff Mod Blocks",
+  "item.randomstuffmod.metal_detector.no_valuables": "No Valuables Found"
 }
