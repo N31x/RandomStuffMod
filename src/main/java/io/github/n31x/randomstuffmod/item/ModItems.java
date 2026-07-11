@@ -1,6 +1,7 @@
 package io.github.n31x.randomstuffmod.item;
 
 import io.github.n31x.randomstuffmod.RandomStuffMod;
+import io.github.n31x.randomstuffmod.food.ModFoods;
 import io.github.n31x.randomstuffmod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -17,6 +18,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> METAL_DETECTOR = ITEMS.registerItem("metal_detector",
             properties -> new MetalDetectorItem(properties.durability(64)));
+
+    public static final DeferredItem<Item> CORN = ITEMS.registerItem("corn",
+            properties -> new Item(properties.food(ModFoods.CORN, ModFoods.CORN_CONSUMABLE)));
 
 
 
