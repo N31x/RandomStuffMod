@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -55,8 +56,31 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("lead")
                 .save(output);
 
+        shaped(RecipeCategory.MISC, ModItems.LEAD_INGOT.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.LEAD_NUGGET.get())
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead")
+                .save(output);
+
+        shapeless(RecipeCategory.MISC, ModItems.LEAD_NUGGET.get(), 9)
+                .requires(ModItems.LEAD_INGOT.get())
+                .unlockedBy(getHasName(ModItems.LEAD_NUGGET.get()), has(ModItems.LEAD_NUGGET))
+                .group("lead")
+                .save(output);
+
+        shapeless(RecipeCategory.MISC, ModItems.RED_PAPER.get())
+                .requires(Items.PAPER)
+                .requires(Items.RED_DYE)
+                .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
+                .unlockedBy(getHasName(Items.RED_DYE), has(Items.RED_DYE))
+                .group("lead")
+                .save(output);
+
         List<ItemLike> LEAD_SMELTABLES = List.of(ModItems.RAW_LEAD,
-                ModBlocks.LEAD_ORE);
+                ModBlocks.LEAD_ORE, ModBlocks.DEEPSLATE_LEAD_ORE);
 
         oreSmelting(LEAD_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.LEAD_INGOT.get(), 0.25f, 200, "lead");
         oreBlasting(LEAD_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.LEAD_INGOT.get(), 0.25f, 100, "lead");

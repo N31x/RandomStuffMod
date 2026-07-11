@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "lead",
+  "key": {
+    "A": "randomstuffmod:lead_nugget"
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "id": "randomstuffmod:lead_ingot"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "lead",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:red_dye"
+  ],
+  "result": {
+    "id": "randomstuffmod:red_paper"
+  }
+}

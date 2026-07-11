@@ -20,6 +20,8 @@ public class ModModelProvider extends ModelProvider {
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         itemModels.generateFlatItem(ModItems.LEAD_INGOT.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.RAW_LEAD.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.LEAD_NUGGET.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.RED_PAPER.get(), ModelTemplates.FLAT_ITEM);
 
 
 
@@ -27,6 +29,7 @@ public class ModModelProvider extends ModelProvider {
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.RAW_LEAD_BLOCk.get());
         blockModels.createTrivialCube(ModBlocks.LEAD_ORE.get());
+        blockModels.createTrivialCube(ModBlocks.DEEPSLATE_LEAD_ORE.get());
     }
 
 }

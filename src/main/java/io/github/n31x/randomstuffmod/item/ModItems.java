@@ -11,6 +11,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> LEAD_INGOT = ITEMS.registerSimpleItem("lead_ingot");
     public static final DeferredItem<Item> RAW_LEAD = ITEMS.registerSimpleItem("raw_lead");
+    public static final DeferredItem<Item> LEAD_NUGGET = ITEMS.registerSimpleItem("lead_nugget");
+    public static final DeferredItem<Item> RED_PAPER = ITEMS.registerSimpleItem("red_paper");
 
 
 

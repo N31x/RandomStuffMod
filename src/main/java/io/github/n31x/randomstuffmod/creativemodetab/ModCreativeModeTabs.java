@@ -25,6 +25,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LEAD_INGOT);
                         output.accept(ModItems.RAW_LEAD);
+                        output.accept(ModItems.LEAD_NUGGET);
+                        output.accept(ModItems.RED_PAPER);
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_blocks_tab",
@@ -33,6 +35,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.RAW_LEAD_BLOCk);
                         output.accept(ModBlocks.LEAD_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_LEAD_ORE);
                     }).build());
 
     public static void register(IEventBus eventBus) {
