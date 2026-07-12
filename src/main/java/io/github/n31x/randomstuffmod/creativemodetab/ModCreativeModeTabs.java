@@ -30,6 +30,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.METAL_DETECTOR);
                         output.accept(ModItems.CORN);
                         output.accept(ModItems.NETHER_COAL);
+                        output.accept(ModItems.WRAPPING_PAPER);
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_blocks_tab",

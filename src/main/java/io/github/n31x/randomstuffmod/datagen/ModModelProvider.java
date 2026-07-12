@@ -25,6 +25,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.METAL_DETECTOR.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.CORN.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.NETHER_COAL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.WRAPPING_PAPER.get(), ModelTemplates.FLAT_ITEM);
 
 
 

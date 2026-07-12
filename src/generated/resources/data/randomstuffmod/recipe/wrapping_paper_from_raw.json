@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "red_paper",
+  "group": "wrapping_paper",
   "ingredients": [
+    "minecraft:red_dye",
     "minecraft:paper",
-    "minecraft:red_dye"
+    "minecraft:paper"
   ],
   "result": {
-    "id": "randomstuffmod:red_paper"
+    "id": "randomstuffmod:wrapping_paper"
   }
 }

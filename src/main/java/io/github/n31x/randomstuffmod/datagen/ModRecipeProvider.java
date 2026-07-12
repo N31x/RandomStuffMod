@@ -101,12 +101,28 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("lead")
                 .save(output, "randomstuffmod:lead_ingot_from_lead_block");
 
+        shapeless(RecipeCategory.MISC, ModItems.WRAPPING_PAPER.get())
+                .requires(ModItems.RED_PAPER.get())
+                .requires(Items.PAPER)
+                .unlockedBy(getHasName(ModItems.RED_PAPER.get()), has(ModItems.RED_PAPER))
+                .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
+                .group("wrapping_paper")
+                .save(output);
+
+        shapeless(RecipeCategory.MISC, ModItems.WRAPPING_PAPER.get())
+                .requires(Items.RED_DYE)
+                .requires(Items.PAPER, 2)
+                .unlockedBy(getHasName(Items.RED_DYE), has(Items.RED_DYE))
+                .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
+                .group("wrapping_paper")
+                .save(output, "randomstuffmod:wrapping_paper_from_raw");
+
         shapeless(RecipeCategory.MISC, ModItems.RED_PAPER.get())
                 .requires(Items.PAPER)
                 .requires(Items.RED_DYE)
                 .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
                 .unlockedBy(getHasName(Items.RED_DYE), has(Items.RED_DYE))
-                .group("lead")
+                .group("red_paper")
                 .save(output);
 
         List<ItemLike> LEAD_SMELTABLES = List.of(ModItems.RAW_LEAD,

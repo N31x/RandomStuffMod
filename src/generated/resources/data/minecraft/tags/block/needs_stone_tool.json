@@ -1,6 +1,8 @@
 {
   "values": [
     "randomstuffmod:raw_lead_block",
-    "randomstuffmod:nether_coal_block"
+    "randomstuffmod:nether_coal_block",
+    "randomstuffmod:lead_slab",
+    "randomstuffmod:lead_block"
   ]
 }
