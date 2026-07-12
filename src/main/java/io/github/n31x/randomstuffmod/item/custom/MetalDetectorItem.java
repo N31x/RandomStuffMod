@@ -1,5 +1,6 @@
 package io.github.n31x.randomstuffmod.item.custom;
 
+import io.github.n31x.randomstuffmod.tags.ModTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -80,7 +81,7 @@ public class MetalDetectorItem extends Item {
     }
 
     private boolean isValuableBlock(BlockState blockState) {
-        return blockState.is(Tags.Blocks.ORES);
+        return blockState.is(ModTags.Blocks.METAL_DETECTABLES);
     }
 
     @Override

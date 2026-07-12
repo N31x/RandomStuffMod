@@ -2,9 +2,11 @@ package io.github.n31x.randomstuffmod.datagen;
 
 import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.block.ModBlocks;
+import io.github.n31x.randomstuffmod.tags.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
@@ -31,5 +33,10 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.LEAD_ORE.get())
                 .add(ModBlocks.DEEPSLATE_LEAD_ORE.get())
                 .add(ModBlocks.NETHER_COAL_ORE.get());
+
+        tag(ModTags.Blocks.METAL_DETECTABLES)
+                .addTag(Tags.Blocks.ORES)
+                .add(ModBlocks.LEAD_ORE.get())
+                .add(ModBlocks.DEEPSLATE_LEAD_ORE.get());
     }
 }
