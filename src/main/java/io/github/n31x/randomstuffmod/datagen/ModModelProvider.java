@@ -30,12 +30,15 @@ public class ModModelProvider extends ModelProvider {
 
 
         /* BLOCKS */
-        blockModels.createTrivialCube(ModBlocks.RAW_LEAD_BLOCk.get());
+        blockModels.createTrivialCube(ModBlocks.RAW_LEAD_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.LEAD_ORE.get());
         blockModels.createTrivialCube(ModBlocks.DEEPSLATE_LEAD_ORE.get());
         blockModels.createTrivialCube(ModBlocks.MAGIC_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.NETHER_COAL_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.NETHER_COAL_ORE.get());
-    }
 
+        blockModels.family(ModBlocks.LEAD_BLOCK.get())
+                .stairs(ModBlocks.LEAD_STAIRS.get())
+                .slab(ModBlocks.LEAD_SLAB.get());
+    }
 }

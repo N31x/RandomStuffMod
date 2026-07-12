@@ -9,7 +9,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -22,7 +24,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(RandomStuffMod.MOD_ID);
 
-    public static final DeferredBlock<Block> RAW_LEAD_BLOCk = registerBlock("raw_lead_block",
+    public static final DeferredBlock<Block> RAW_LEAD_BLOCK = registerBlock("raw_lead_block",
             properties -> new Block(properties.strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
@@ -45,6 +47,20 @@ public class ModBlocks {
     public static final DeferredBlock<Block> NETHER_COAL_ORE = registerBlock("nether_coal_ore",
             properties -> new Block(properties.strength(3f)
                     .sound(SoundType.NETHER_ORE)));
+
+    public static final DeferredBlock<Block> LEAD_BLOCK = registerBlock("lead_block",
+            properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+
+    public static final DeferredBlock<Block> LEAD_STAIRS = registerBlock("lead_stairs",
+            properties -> new StairBlock(ModBlocks.LEAD_BLOCK.get().defaultBlockState(), properties
+                    .strength(3f).requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+
+    public static final DeferredBlock<Block> LEAD_SLAB = registerBlock("lead_slab",
+            properties -> new SlabBlock(properties
+                    .strength(3f).requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {

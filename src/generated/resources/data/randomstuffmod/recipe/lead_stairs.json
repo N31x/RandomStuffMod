@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "lead",
+  "key": {
+    "#": "randomstuffmod:lead_ingot"
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "randomstuffmod:lead_stairs"
+  }
+}

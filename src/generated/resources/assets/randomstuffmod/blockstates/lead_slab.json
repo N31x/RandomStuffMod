@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "randomstuffmod:block/lead_slab"
+    },
+    "type=double": {
+      "model": "randomstuffmod:block/lead_block"
+    },
+    "type=top": {
+      "model": "randomstuffmod:block/lead_slab_top"
+    }
+  }
+}

@@ -41,7 +41,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes() {
-        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_LEAD_BLOCk.get())
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_LEAD_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
@@ -51,8 +51,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(output);
 
         shapeless(RecipeCategory.MISC, ModItems.RAW_LEAD.get(), 9)
-                .requires(ModBlocks.RAW_LEAD_BLOCk.get())
-                .unlockedBy(getHasName(ModBlocks.RAW_LEAD_BLOCk.get()), has(ModBlocks.RAW_LEAD_BLOCk))
+                .requires(ModBlocks.RAW_LEAD_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RAW_LEAD_BLOCK.get()), has(ModBlocks.RAW_LEAD_BLOCK))
                 .group("lead")
                 .save(output);
 
@@ -86,6 +86,21 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("lead")
                 .save(output);
 
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEAD_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.LEAD_INGOT.get())
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead")
+                .save(output);
+
+        shapeless(RecipeCategory.MISC, ModItems.LEAD_INGOT.get(), 9)
+                .requires(ModBlocks.LEAD_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.LEAD_BLOCK.get()), has(ModBlocks.LEAD_BLOCK))
+                .group("lead")
+                .save(output, "randomstuffmod:lead_ingot_from_lead_block");
+
         shapeless(RecipeCategory.MISC, ModItems.RED_PAPER.get())
                 .requires(Items.PAPER)
                 .requires(Items.RED_DYE)
@@ -103,6 +118,11 @@ public class ModRecipeProvider extends RecipeProvider {
         oreBlasting(LEAD_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.LEAD_INGOT.get(), 0.25f, 100, "lead");
         oreSmelting(NETHER_COAL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.NETHER_COAL.get(), 0.25f, 200, "nether_coal");
         oreBlasting(NETHER_COAL_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.NETHER_COAL.get(), 0.25f, 100, "nether_coal");
+
+        stairBuilder(ModBlocks.LEAD_STAIRS.get(), Ingredient.of(ModItems.LEAD_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead").save(output);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEAD_SLAB.get(), ModBlocks.RAW_LEAD_BLOCK);
     }
 
     @Override

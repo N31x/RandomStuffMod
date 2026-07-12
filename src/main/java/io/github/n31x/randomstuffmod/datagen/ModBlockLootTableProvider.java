@@ -17,9 +17,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.RAW_LEAD_BLOCk.get());
+        dropSelf(ModBlocks.RAW_LEAD_BLOCK.get());
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
         dropSelf(ModBlocks.NETHER_COAL_BLOCK.get());
+        dropSelf(ModBlocks.LEAD_STAIRS.get());
+        dropSelf(ModBlocks.LEAD_BLOCK.get());
 
         add(ModBlocks.LEAD_ORE.get(),
                 createOreDrop(ModBlocks.LEAD_ORE.get(), ModItems.RAW_LEAD.get()));
@@ -27,6 +29,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 createOreDrop(ModBlocks.DEEPSLATE_LEAD_ORE.get(), ModItems.RAW_LEAD.get()));
         add(ModBlocks.NETHER_COAL_ORE.get(),
                 createOreDrop(ModBlocks.NETHER_COAL_ORE.get(), ModItems.NETHER_COAL.get()));
+
+        add(ModBlocks.LEAD_SLAB.get(), this::createSlabItemTable);
 
     }
 

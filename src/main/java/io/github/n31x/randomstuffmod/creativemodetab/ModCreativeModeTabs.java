@@ -33,15 +33,18 @@ public class ModCreativeModeTabs {
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.RAW_LEAD_BLOCk.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.RAW_LEAD_BLOCK.get()))
                     .title(Component.translatable("creativetab.randomstuffmod.blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.RAW_LEAD_BLOCk);
+                        output.accept(ModBlocks.RAW_LEAD_BLOCK);
                         output.accept(ModBlocks.LEAD_ORE);
                         output.accept(ModBlocks.DEEPSLATE_LEAD_ORE);
                         output.accept(ModBlocks.MAGIC_BLOCK);
                         output.accept(ModBlocks.NETHER_COAL_BLOCK);
                         output.accept(ModBlocks.NETHER_COAL_ORE);
+                        output.accept(ModBlocks.LEAD_STAIRS);
+                        output.accept(ModBlocks.LEAD_SLAB);
+                        output.accept(ModBlocks.LEAD_BLOCK);
                     }).build());
 
     public static void register(IEventBus eventBus) {
