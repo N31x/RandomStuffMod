@@ -46,6 +46,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LEAD_STAIRS);
                         output.accept(ModBlocks.LEAD_SLAB);
                         output.accept(ModBlocks.LEAD_BLOCK);
+                        output.accept(ModBlocks.LEAD_PRESSURE_PLATE);
+                        output.accept(ModBlocks.LEAD_BUTTON);
                     }).build());
 
     public static void register(IEventBus eventBus) {

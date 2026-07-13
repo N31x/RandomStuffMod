@@ -8,11 +8,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -26,7 +25,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> RAW_LEAD_BLOCK = registerBlock("raw_lead_block",
             properties -> new Block(properties.strength(4f)
-                    .requiresCorrectToolForDrops().sound(SoundType.METAL)));
+                    .requiresCorrectToolForDrops().sound(SoundType.IRON)));
 
     public static final DeferredBlock<Block> LEAD_ORE = registerBlock("lead_ore",
             properties -> new Block(properties.strength(4f)
@@ -50,17 +49,31 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> LEAD_BLOCK = registerBlock("lead_block",
             properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops()
-                    .sound(SoundType.METAL)));
+                    .sound(SoundType.IRON)));
 
     public static final DeferredBlock<Block> LEAD_STAIRS = registerBlock("lead_stairs",
             properties -> new StairBlock(ModBlocks.LEAD_BLOCK.get().defaultBlockState(), properties
                     .strength(3f).requiresCorrectToolForDrops()
-                    .sound(SoundType.METAL)));
+                    .sound(SoundType.IRON)));
 
     public static final DeferredBlock<Block> LEAD_SLAB = registerBlock("lead_slab",
             properties -> new SlabBlock(properties
                     .strength(3f).requiresCorrectToolForDrops()
-                    .sound(SoundType.METAL)));
+                    .sound(SoundType.IRON)));
+
+    public static final DeferredBlock<Block> LEAD_PRESSURE_PLATE = registerBlock("lead_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.IRON, properties
+                    .strength(0.5f)
+                    .noCollision().forceSolidOn().pushReaction(PushReaction.DESTROY)
+                    .sound(SoundType.IRON)));
+
+    public static final DeferredBlock<Block> LEAD_BUTTON = registerBlock("lead_button",
+            properties -> new ButtonBlock(BlockSetType.IRON, 20, properties
+                    .strength(0.5f)
+                    .noCollision().pushReaction(PushReaction.DESTROY)
+                    .sound(SoundType.IRON)));
+
+
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {

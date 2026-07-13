@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "lead",
+  "ingredients": [
+    "randomstuffmod:lead_ingot"
+  ],
+  "result": {
+    "id": "randomstuffmod:lead_button"
+  }
+}

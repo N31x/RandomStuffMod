@@ -138,7 +138,11 @@ public class ModRecipeProvider extends RecipeProvider {
         stairBuilder(ModBlocks.LEAD_STAIRS.get(), Ingredient.of(ModItems.LEAD_INGOT.get()))
                 .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
                 .group("lead").save(output);
-        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEAD_SLAB.get(), ModBlocks.RAW_LEAD_BLOCK);
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEAD_SLAB.get(), ModItems.LEAD_INGOT);
+        pressurePlate(ModBlocks.LEAD_PRESSURE_PLATE.get(), ModItems.LEAD_INGOT.get());
+        buttonBuilder(ModBlocks.LEAD_BUTTON.get(), Ingredient.of(ModItems.LEAD_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead").save(output);
     }
 
     @Override

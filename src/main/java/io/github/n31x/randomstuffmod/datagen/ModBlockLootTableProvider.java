@@ -22,6 +22,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.NETHER_COAL_BLOCK.get());
         dropSelf(ModBlocks.LEAD_STAIRS.get());
         dropSelf(ModBlocks.LEAD_BLOCK.get());
+        dropSelf(ModBlocks.LEAD_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.LEAD_BUTTON.get());
 
         add(ModBlocks.LEAD_ORE.get(),
                 createOreDrop(ModBlocks.LEAD_ORE.get(), ModItems.RAW_LEAD.get()));

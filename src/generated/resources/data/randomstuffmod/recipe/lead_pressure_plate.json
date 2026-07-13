@@ -1,14 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "redstone",
   "key": {
     "#": "randomstuffmod:lead_ingot"
   },
   "pattern": [
-    "###"
+    "##"
   ],
   "result": {
-    "count": 6,
-    "id": "randomstuffmod:lead_slab"
+    "id": "randomstuffmod:lead_pressure_plate"
   }
 }
