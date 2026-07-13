@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "lead",
+  "key": {
+    "#": "randomstuffmod:lead_ingot"
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "randomstuffmod:lead_door"
+  }
+}

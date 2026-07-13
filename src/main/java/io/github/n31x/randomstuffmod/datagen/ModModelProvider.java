@@ -42,6 +42,11 @@ public class ModModelProvider extends ModelProvider {
                 .stairs(ModBlocks.LEAD_STAIRS.get())
                 .slab(ModBlocks.LEAD_SLAB.get())
                 .pressurePlate(ModBlocks.LEAD_PRESSURE_PLATE.get())
-                .button(ModBlocks.LEAD_BUTTON.get());
+                .button(ModBlocks.LEAD_BUTTON.get())
+                .fence(ModBlocks.LEAD_FENCE.get())
+                .fenceGate(ModBlocks.LEAD_FENCE_GATE.get())
+                .wall(ModBlocks.LEAD_WALL.get())
+                .door(ModBlocks.LEAD_DOOR.get())
+                .trapdoor(ModBlocks.LEAD_TRAPDOOR.get());
     }
 }

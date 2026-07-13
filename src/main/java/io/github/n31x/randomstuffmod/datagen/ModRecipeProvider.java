@@ -143,6 +143,20 @@ public class ModRecipeProvider extends RecipeProvider {
         buttonBuilder(ModBlocks.LEAD_BUTTON.get(), Ingredient.of(ModItems.LEAD_INGOT.get()))
                 .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
                 .group("lead").save(output);
+        fenceBuilder(ModBlocks.LEAD_FENCE.get(), Ingredient.of(ModItems.LEAD_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead").save(output);
+        fenceGateBuilder(ModBlocks.LEAD_FENCE_GATE.get(), Ingredient.of(ModItems.LEAD_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead").save(output);
+        wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEAD_WALL.get(), ModItems.LEAD_INGOT.get());
+        doorBuilder(ModBlocks.LEAD_DOOR.get(), Ingredient.of(ModItems.LEAD_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead").save(output);
+        trapdoorBuilder(ModBlocks.LEAD_TRAPDOOR.get(), Ingredient.of(ModItems.LEAD_INGOT.get()))
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead").save(output);
+
     }
 
     @Override

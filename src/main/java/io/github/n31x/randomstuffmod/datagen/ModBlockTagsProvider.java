@@ -26,13 +26,23 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.NETHER_COAL_ORE.get())
                 .add(ModBlocks.LEAD_STAIRS.get())
                 .add(ModBlocks.LEAD_SLAB.get())
-                .add(ModBlocks.LEAD_BLOCK.get());
+                .add(ModBlocks.LEAD_BLOCK.get())
+                .add(ModBlocks.LEAD_FENCE.get())
+                .add(ModBlocks.LEAD_FENCE_GATE.get())
+                .add(ModBlocks.LEAD_WALL.get())
+                .add(ModBlocks.LEAD_DOOR.get())
+                .add(ModBlocks.LEAD_TRAPDOOR.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.RAW_LEAD_BLOCK.get())
                 .add(ModBlocks.NETHER_COAL_BLOCK.get())
                 .add(ModBlocks.LEAD_SLAB.get())
-                .add(ModBlocks.LEAD_BLOCK.get());
+                .add(ModBlocks.LEAD_BLOCK.get())
+                .add(ModBlocks.LEAD_FENCE.get())
+                .add(ModBlocks.LEAD_FENCE_GATE.get())
+                .add(ModBlocks.LEAD_WALL.get())
+                .add(ModBlocks.LEAD_DOOR.get())
+                .add(ModBlocks.LEAD_TRAPDOOR.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.LEAD_ORE.get())
@@ -44,5 +54,24 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .addTag(Tags.Blocks.ORES)
                 .add(ModBlocks.LEAD_ORE.get())
                 .add(ModBlocks.DEEPSLATE_LEAD_ORE.get());
+
+        tag(BlockTags.STAIRS)
+                .add(ModBlocks.LEAD_STAIRS.get());
+        tag(BlockTags.SLABS)
+                .add(ModBlocks.LEAD_SLAB.get());
+        tag(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.LEAD_PRESSURE_PLATE.get());
+        tag(BlockTags.BUTTONS)
+                .add(ModBlocks.LEAD_BUTTON.get());
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.LEAD_FENCE.get());
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.LEAD_FENCE_GATE.get());
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.LEAD_WALL.get());
+        tag(BlockTags.DOORS)
+                .add(ModBlocks.LEAD_DOOR.get());
+        tag(BlockTags.TRAPDOORS)
+                .add(ModBlocks.LEAD_TRAPDOOR.get());
     }
 }

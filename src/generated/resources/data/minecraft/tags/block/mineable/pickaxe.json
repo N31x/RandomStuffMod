@@ -7,6 +7,11 @@
     "randomstuffmod:nether_coal_ore",
     "randomstuffmod:lead_stairs",
     "randomstuffmod:lead_slab",
-    "randomstuffmod:lead_block"
+    "randomstuffmod:lead_block",
+    "randomstuffmod:lead_fence",
+    "randomstuffmod:lead_fence_gate",
+    "randomstuffmod:lead_wall",
+    "randomstuffmod:lead_door",
+    "randomstuffmod:lead_trapdoor"
   ]
 }

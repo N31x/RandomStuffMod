@@ -4,6 +4,7 @@ import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.block.custom.MagicBlock;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -72,6 +73,35 @@ public class ModBlocks {
                     .strength(0.5f)
                     .noCollision().pushReaction(PushReaction.DESTROY)
                     .sound(SoundType.IRON)));
+
+    public static final DeferredBlock<Block> LEAD_FENCE = registerBlock("lead_fence",
+            properties -> new FenceBlock(properties
+                    .strength(1f).requiresCorrectToolForDrops().forceSolidOn()
+                    .sound(SoundType.IRON)));
+
+    public static final DeferredBlock<Block> LEAD_FENCE_GATE = registerBlock("lead_fence_gate",
+            properties -> new FenceGateBlock(properties
+                    .strength(1f).requiresCorrectToolForDrops().forceSolidOn()
+                    .sound(SoundType.IRON), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final DeferredBlock<Block> LEAD_WALL = registerBlock("lead_wall",
+            properties -> new WallBlock(properties
+                    .strength(2f).requiresCorrectToolForDrops().forceSolidOn()
+                    .sound(SoundType.IRON)));
+
+    public static final DeferredBlock<Block> LEAD_DOOR = registerBlock("lead_door",
+            properties -> new DoorBlock(BlockSetType.IRON, properties
+                    .strength(2f).requiresCorrectToolForDrops().forceSolidOn()
+                    .noOcclusion().pushReaction(PushReaction.DESTROY)
+                    .sound(SoundType.IRON)));
+
+    public static final DeferredBlock<Block> LEAD_TRAPDOOR = registerBlock("lead_trapdoor",
+            properties -> new TrapDoorBlock(BlockSetType.IRON, properties
+                    .strength(2f).requiresCorrectToolForDrops().forceSolidOn()
+                    .noOcclusion().pushReaction(PushReaction.DESTROY)
+                    .sound(SoundType.IRON)));
+
+
 
 
 

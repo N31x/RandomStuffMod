@@ -48,6 +48,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LEAD_BLOCK);
                         output.accept(ModBlocks.LEAD_PRESSURE_PLATE);
                         output.accept(ModBlocks.LEAD_BUTTON);
+                        output.accept(ModBlocks.LEAD_FENCE);
+                        output.accept(ModBlocks.LEAD_FENCE_GATE);
+                        output.accept(ModBlocks.LEAD_WALL);
+                        output.accept(ModBlocks.LEAD_DOOR);
+                        output.accept(ModBlocks.LEAD_TRAPDOOR);
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "randomstuffmod:block/lead_door_bottom",
+    "top": "randomstuffmod:block/lead_door_top"
+  }
+}

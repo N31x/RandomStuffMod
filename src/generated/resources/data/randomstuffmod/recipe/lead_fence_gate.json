@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "lead",
+  "key": {
+    "#": "minecraft:stick",
+    "W": "randomstuffmod:lead_ingot"
+  },
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "result": {
+    "id": "randomstuffmod:lead_fence_gate"
+  }
+}
