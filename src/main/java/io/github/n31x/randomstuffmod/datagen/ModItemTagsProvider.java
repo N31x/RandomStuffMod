@@ -39,5 +39,13 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.SPEARS)
                 .add(ModItems.LEAD_SPEAR.get());
 
+        tag(ItemTags.HEAD_ARMOR)
+                .add(ModItems.LEAD_HELMET.get());
+        tag(ItemTags.CHEST_ARMOR)
+                .add(ModItems.LEAD_CHESTPLATE.get());
+        tag(ItemTags.LEG_ARMOR)
+                .add(ModItems.LEAD_LEGGINGS.get());
+        tag(ItemTags.FOOT_ARMOR)
+                .add(ModItems.LEAD_BOOTS.get());
     }
 }

@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "randomstuffmod:lead"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "randomstuffmod:lead"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "randomstuffmod:lead"
+      }
+    ]
+  }
+}

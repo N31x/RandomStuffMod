@@ -6,6 +6,7 @@ import io.github.n31x.randomstuffmod.item.custom.MetalDetectorItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -50,6 +51,15 @@ public class ModItems {
             properties -> new Item(properties.spear(ModToolTiers.LEAD, 1.0f, 1.025f, 0.55f,
                     2.5f, 10.5f, 6.6f, 5.1f, 10.5f, 4.6f)));
 
+
+    public static final DeferredItem<Item> LEAD_HELMET = ITEMS.registerItem("lead_helmet",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.LEAD_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final DeferredItem<Item> LEAD_CHESTPLATE = ITEMS.registerItem("lead_chestplate",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.LEAD_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final DeferredItem<Item> LEAD_LEGGINGS = ITEMS.registerItem("lead_leggings",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.LEAD_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final DeferredItem<Item> LEAD_BOOTS = ITEMS.registerItem("lead_boots",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.LEAD_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
 
     public static void register(IEventBus eventBus) {

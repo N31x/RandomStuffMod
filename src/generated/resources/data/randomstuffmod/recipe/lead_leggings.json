@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "lead",
+  "key": {
+    "L": "randomstuffmod:lead_ingot"
+  },
+  "pattern": [
+    "LLL",
+    "L L",
+    "L L"
+  ],
+  "result": {
+    "id": "randomstuffmod:lead_leggings"
+  }
+}

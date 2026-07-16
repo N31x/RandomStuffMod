@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "lead",
+  "key": {
+    "L": "randomstuffmod:lead_ingot"
+  },
+  "pattern": [
+    "L L",
+    "LLL",
+    "LLL"
+  ],
+  "result": {
+    "id": "randomstuffmod:lead_chestplate"
+  }
+}

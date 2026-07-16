@@ -175,7 +175,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .group("lead")
                 .save(output);
-
         shaped(RecipeCategory.COMBAT, ModItems.LEAD_SPEAR.get())
                 .pattern("  L")
                 .pattern(" S ")
@@ -197,7 +196,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .group("lead")
                 .save(output);
-
         shaped(RecipeCategory.TOOLS, ModItems.LEAD_AXE.get())
                 .pattern("LL")
                 .pattern("SL")
@@ -208,7 +206,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .group("lead")
                 .save(output);
-
         shaped(RecipeCategory.TOOLS, ModItems.LEAD_SHOVEL.get())
                 .pattern("L")
                 .pattern("S")
@@ -219,7 +216,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .group("lead")
                 .save(output);
-
         shaped(RecipeCategory.TOOLS, ModItems.LEAD_HOE.get())
                 .pattern("LL")
                 .pattern("S ")
@@ -228,6 +224,37 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('S', Items.STICK)
                 .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .group("lead")
+                .save(output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.LEAD_HELMET.get())
+                .pattern("LLL")
+                .pattern("L L")
+                .define('L', ModItems.LEAD_INGOT.get())
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead")
+                .save(output);
+        shaped(RecipeCategory.COMBAT, ModItems.LEAD_CHESTPLATE.get())
+                .pattern("L L")
+                .pattern("LLL")
+                .pattern("LLL")
+                .define('L', ModItems.LEAD_INGOT.get())
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead")
+                .save(output);
+        shaped(RecipeCategory.COMBAT, ModItems.LEAD_LEGGINGS.get())
+                .pattern("LLL")
+                .pattern("L L")
+                .pattern("L L")
+                .define('L', ModItems.LEAD_INGOT.get())
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .group("lead")
+                .save(output);
+        shaped(RecipeCategory.COMBAT, ModItems.LEAD_BOOTS.get())
+                .pattern("L L")
+                .pattern("L L")
+                .define('L', ModItems.LEAD_INGOT.get())
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
                 .group("lead")
                 .save(output);
 

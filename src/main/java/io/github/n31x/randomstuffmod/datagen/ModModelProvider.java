@@ -3,6 +3,7 @@ package io.github.n31x.randomstuffmod.datagen;
 import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.RandomStuffModDataGen;
 import io.github.n31x.randomstuffmod.block.ModBlocks;
+import io.github.n31x.randomstuffmod.item.ModArmorMaterials;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -33,6 +34,12 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.LEAD_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.LEAD_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateSpear(ModItems.LEAD_SPEAR.get());
+
+        itemModels.generateTrimmableItem(ModItems.LEAD_HELMET.get(), ModArmorMaterials.LEAD_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.LEAD_CHESTPLATE.get(), ModArmorMaterials.LEAD_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.LEAD_LEGGINGS.get(), ModArmorMaterials.LEAD_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.LEAD_BOOTS.get(), ModArmorMaterials.LEAD_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+
 
 
         /* BLOCKS */

@@ -66,6 +66,10 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LEAD_SWORD);
                         output.accept(ModItems.LEAD_SPEAR);
+                        output.accept(ModItems.LEAD_HELMET);
+                        output.accept(ModItems.LEAD_CHESTPLATE);
+                        output.accept(ModItems.LEAD_LEGGINGS);
+                        output.accept(ModItems.LEAD_BOOTS);
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_TOOLS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_tools_tab",
