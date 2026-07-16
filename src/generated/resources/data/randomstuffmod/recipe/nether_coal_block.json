@@ -3,12 +3,12 @@
   "category": "building",
   "group": "nether_coal",
   "key": {
-    "A": "randomstuffmod:nether_coal"
+    "N": "randomstuffmod:nether_coal"
   },
   "pattern": [
-    "AAA",
-    "AAA",
-    "AAA"
+    "NNN",
+    "NNN",
+    "NNN"
   ],
   "result": {
     "id": "randomstuffmod:nether_coal_block"

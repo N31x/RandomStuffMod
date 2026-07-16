@@ -1,16 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
+  "category": "building",
   "group": "lead",
   "key": {
-    "#": "randomstuffmod:lead_ingot"
+    "L": "randomstuffmod:lead_ingot"
   },
   "pattern": [
-    "###",
-    "###"
+    "LL",
+    "LL"
   ],
   "result": {
-    "count": 2,
     "id": "randomstuffmod:lead_trapdoor"
   }
 }

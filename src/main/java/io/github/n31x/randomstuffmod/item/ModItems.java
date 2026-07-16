@@ -4,9 +4,7 @@ import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.food.ModFoods;
 import io.github.n31x.randomstuffmod.item.custom.MetalDetectorItem;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -37,6 +35,20 @@ public class ModItems {
 
     public static final DeferredItem<Item> NETHER_COAL = ITEMS.registerItem("nether_coal",
             properties -> new Item(properties.fireResistant()));
+
+    public static final DeferredItem<Item> LEAD_SWORD = ITEMS.registerItem("lead_sword",
+            properties -> new Item(properties.sword(ModToolTiers.LEAD, 3.0f, -2.4f)));
+    public static final DeferredItem<Item> LEAD_PICKAXE = ITEMS.registerItem("lead_pickaxe",
+            properties -> new Item(properties.pickaxe(ModToolTiers.LEAD, 1.0f, -2.8f)));
+    public static final DeferredItem<Item> LEAD_AXE = ITEMS.registerItem("lead_axe",
+            properties -> new AxeItem(ModToolTiers.LEAD, 5.5f, -3.05f, properties));
+    public static final DeferredItem<Item> LEAD_SHOVEL = ITEMS.registerItem("lead_shovel",
+            properties -> new ShovelItem(ModToolTiers.LEAD, 1.5f, -3.0f, properties));
+    public static final DeferredItem<Item> LEAD_HOE = ITEMS.registerItem("lead_hoe",
+            properties -> new HoeItem(ModToolTiers.LEAD, -2.5f, -0.5f, properties));
+    public static final DeferredItem<Item> LEAD_SPEAR = ITEMS.registerItem("lead_spear",
+            properties -> new Item(properties.spear(ModToolTiers.LEAD, 1.0f, 1.025f, 0.55f,
+                    2.5f, 10.5f, 6.6f, 5.1f, 10.5f, 4.6f)));
 
 
 

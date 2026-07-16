@@ -27,7 +27,12 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.NETHER_COAL.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.WRAPPING_PAPER.get(), ModelTemplates.FLAT_ITEM);
 
-
+        itemModels.generateFlatItem(ModItems.LEAD_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.LEAD_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.LEAD_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.LEAD_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.LEAD_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateSpear(ModItems.LEAD_SPEAR.get());
 
 
         /* BLOCKS */

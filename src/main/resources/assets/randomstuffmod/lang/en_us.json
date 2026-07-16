@@ -7,6 +7,13 @@
   "item.randomstuffmod.corn": "Corn",
   "item.randomstuffmod.nether_coal": "Nether Coal",
   "item.randomstuffmod.wrapping_paper": "Wrapping Paper",
+  "item.randomstuffmod.lead_sword": "Lead Sword",
+  "item.randomstuffmod.lead_pickaxe": "Lead Pickaxe",
+  "item.randomstuffmod.lead_axe": "Lead Axe",
+  "item.randomstuffmod.lead_shovel": "Lead Shovel",
+  "item.randomstuffmod.lead_hoe": "Lead Hoe",
+  "item.randomstuffmod.lead_spear": "Lead Spear",
+
   "block.randomstuffmod.raw_lead_block": "Block of Raw Lead",
   "block.randomstuffmod.lead_ore": "Lead Ore",
   "block.randomstuffmod.deepslate_lead_ore": "Deepslate Lead Ore",
@@ -23,11 +30,14 @@
   "block.randomstuffmod.lead_wall": "Lead Wall",
   "block.randomstuffmod.lead_door": "Lead Door",
   "block.randomstuffmod.lead_trapdoor": "Lead Trapdoor",
+
   "creativetab.randomstuffmod.items": "Random Stuff Mod Items",
   "creativetab.randomstuffmod.blocks": "Random Stuff Mod Blocks",
   "item.randomstuffmod.metal_detector.no_valuables": "No Valuables Found",
   "tooltip.randomstuffmod.metal_detector": "Press §eShift§r for more information",
   "tooltip.randomstuffmod.magic_block": "Try throwing valuables on it",
   "tooltip.randomstuffmod.corn": "it's CORN!",
-  "tooltip.randomstuffmod.metal_detector.shift_down": "Use on a block to check if there are any ores up to 64 blocks below it."
+  "tooltip.randomstuffmod.metal_detector.shift_down": "Use on a block to check if there are any ores up to 64 blocks below it.",
+  "creativetab.randomstuffmod.combat": "Random Stuff Mod Combat",
+  "creativetab.randomstuffmod.tools": "Random Stuff Mod Tools"
 }

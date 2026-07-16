@@ -3,12 +3,12 @@
   "category": "building",
   "group": "lead",
   "key": {
-    "A": "randomstuffmod:lead_ingot"
+    "L": "randomstuffmod:lead_ingot"
   },
   "pattern": [
-    "AAA",
-    "AAA",
-    "AAA"
+    "LLL",
+    "LLL",
+    "LLL"
   ],
   "result": {
     "id": "randomstuffmod:lead_block"

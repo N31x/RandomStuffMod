@@ -3,12 +3,12 @@
   "category": "misc",
   "group": "lead",
   "key": {
-    "A": "randomstuffmod:lead_nugget"
+    "L": "randomstuffmod:lead_nugget"
   },
   "pattern": [
-    "AAA",
-    "AAA",
-    "AAA"
+    "LLL",
+    "LLL",
+    "LLL"
   ],
   "result": {
     "id": "randomstuffmod:lead_ingot"

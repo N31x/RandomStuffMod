@@ -21,7 +21,9 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_ITEMS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.LEAD_INGOT.get()))
                     .title(Component.translatable("creativetab.randomstuffmod.items"))
-                    .withTabsAfter(Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "randomstuffmod_blocks_tab"))
+                    .withTabsAfter(Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "randomstuffmod_blocks_tab"),
+                            Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "randomstuffmod_combat_tab"),
+                            Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "randomstuffmod_tools_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LEAD_INGOT);
                         output.accept(ModItems.RAW_LEAD);
@@ -34,8 +36,10 @@ public class ModCreativeModeTabs {
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.RAW_LEAD_BLOCK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.LEAD_BLOCK.get()))
                     .title(Component.translatable("creativetab.randomstuffmod.blocks"))
+                    .withTabsAfter(Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "randomstuffmod_combat_tab"),
+                            Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "randomstuffmod_tools_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.RAW_LEAD_BLOCK);
                         output.accept(ModBlocks.LEAD_ORE);
@@ -53,6 +57,25 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LEAD_WALL);
                         output.accept(ModBlocks.LEAD_DOOR);
                         output.accept(ModBlocks.LEAD_TRAPDOOR);
+                    }).build());
+
+    public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_COMBAT_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_combat_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.LEAD_SWORD.get()))
+                    .title(Component.translatable("creativetab.randomstuffmod.combat"))
+                    .withTabsAfter(Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "randomstuffmod_tools_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.LEAD_SWORD);
+                        output.accept(ModItems.LEAD_SPEAR);
+                    }).build());
+
+    public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_TOOLS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_tools_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.LEAD_PICKAXE.get()))
+                    .title(Component.translatable("creativetab.randomstuffmod.tools"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.LEAD_PICKAXE);
+                        output.accept(ModItems.LEAD_AXE);
+                        output.accept(ModItems.LEAD_SHOVEL);
+                        output.accept(ModItems.LEAD_HOE);
                     }).build());
 
     public static void register(IEventBus eventBus) {
