@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_lead": {
+      "conditions": {
+        "items": [
+          {
+            "items": "randomstuffmod:raw_lead"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_redstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:redstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "randomstuffmod:lead_lamp"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_lead",
+      "has_redstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "randomstuffmod:lead_lamp"
+    ]
+  }
+}

@@ -3,13 +3,17 @@ package io.github.n31x.randomstuffmod.datagen;
 import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.RandomStuffModDataGen;
 import io.github.n31x.randomstuffmod.block.ModBlocks;
+import io.github.n31x.randomstuffmod.block.custom.LeadLampBlock;
 import io.github.n31x.randomstuffmod.item.ModArmorMaterials;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.data.PackOutput;
 
 public class ModModelProvider extends ModelProvider {
@@ -40,6 +44,8 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateTrimmableItem(ModItems.LEAD_LEGGINGS.get(), ModArmorMaterials.LEAD_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
         itemModels.generateTrimmableItem(ModItems.LEAD_BOOTS.get(), ModArmorMaterials.LEAD_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
+        itemModels.generateFlatItem(ModItems.LEAD_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
+
 
 
         /* BLOCKS */
@@ -60,5 +66,12 @@ public class ModModelProvider extends ModelProvider {
                 .wall(ModBlocks.LEAD_WALL.get())
                 .door(ModBlocks.LEAD_DOOR.get())
                 .trapdoor(ModBlocks.LEAD_TRAPDOOR.get());
+
+        blockModels.blockStateOutput.accept(
+                MultiVariantGenerator.dispatch(ModBlocks.LEAD_LAMP.get()).with(BlockModelGenerators.createBooleanModelDispatch(LeadLampBlock.CLICKED,
+                        BlockModelGenerators.plainVariant(blockModels.createSuffixedVariant(ModBlocks.LEAD_LAMP.get(), "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube)),
+                        BlockModelGenerators.plainVariant(TexturedModel.CUBE.create(ModBlocks.LEAD_LAMP.get(), blockModels.modelOutput))
+                        ))
+        );
     }
 }

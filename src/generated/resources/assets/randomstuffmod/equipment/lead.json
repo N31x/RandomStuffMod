@@ -1,5 +1,10 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "randomstuffmod:lead"
+      }
+    ],
     "humanoid": [
       {
         "texture": "randomstuffmod:lead"

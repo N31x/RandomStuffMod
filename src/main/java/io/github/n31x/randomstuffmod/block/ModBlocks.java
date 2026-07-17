@@ -1,6 +1,7 @@
 package io.github.n31x.randomstuffmod.block;
 
 import io.github.n31x.randomstuffmod.RandomStuffMod;
+import io.github.n31x.randomstuffmod.block.custom.LeadLampBlock;
 import io.github.n31x.randomstuffmod.block.custom.MagicBlock;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import net.minecraft.network.chat.Component;
@@ -100,6 +101,10 @@ public class ModBlocks {
                     .strength(2f).requiresCorrectToolForDrops().forceSolidOn()
                     .noOcclusion().pushReaction(PushReaction.DESTROY)
                     .sound(SoundType.IRON)));
+
+    public static final DeferredBlock<Block> LEAD_LAMP = registerBlock("lead_lamp",
+            properties -> new LeadLampBlock(properties.strength(1f)
+                    .lightLevel(state -> state.getValue(LeadLampBlock.CLICKED) ? 15 : 0)));
 
 
 

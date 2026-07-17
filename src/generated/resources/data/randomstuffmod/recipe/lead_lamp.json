@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "lead",
+  "key": {
+    "L": "randomstuffmod:raw_lead",
+    "R": "minecraft:redstone"
+  },
+  "pattern": [
+    "LLL",
+    "LRL",
+    "LLL"
+  ],
+  "result": {
+    "id": "randomstuffmod:lead_lamp"
+  }
+}

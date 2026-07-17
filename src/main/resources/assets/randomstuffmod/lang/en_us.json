@@ -17,6 +17,7 @@
   "item.randomstuffmod.lead_chestplate": "Lead Chestplate",
   "item.randomstuffmod.lead_leggings": "Lead Leggings",
   "item.randomstuffmod.lead_boots": "Lead Boots",
+  "item.randomstuffmod.lead_horse_armor": "Lead Horse Armor",
 
   "block.randomstuffmod.raw_lead_block": "Block of Raw Lead",
   "block.randomstuffmod.lead_ore": "Lead Ore",
@@ -34,6 +35,7 @@
   "block.randomstuffmod.lead_wall": "Lead Wall",
   "block.randomstuffmod.lead_door": "Lead Door",
   "block.randomstuffmod.lead_trapdoor": "Lead Trapdoor",
+  "block.randomstuffmod.lead_lamp": "Lead Lamp",
 
   "creativetab.randomstuffmod.items": "Random Stuff Mod Items",
   "creativetab.randomstuffmod.blocks": "Random Stuff Mod Blocks",

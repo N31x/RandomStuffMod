@@ -50,6 +50,17 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("lead")
                 .save(output);
 
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LEAD_LAMP.get())
+                .pattern("LLL")
+                .pattern("LRL")
+                .pattern("LLL")
+                .define('L', ModItems.RAW_LEAD.get())
+                .define('R', Items.REDSTONE)
+                .unlockedBy(getHasName(ModItems.RAW_LEAD.get()), has(ModItems.RAW_LEAD))
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .group("lead")
+                .save(output);
+
         shapeless(RecipeCategory.MISC, ModItems.RAW_LEAD.get(), 9)
                 .requires(ModBlocks.RAW_LEAD_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_LEAD_BLOCK.get()), has(ModBlocks.RAW_LEAD_BLOCK))

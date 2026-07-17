@@ -57,6 +57,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LEAD_WALL);
                         output.accept(ModBlocks.LEAD_DOOR);
                         output.accept(ModBlocks.LEAD_TRAPDOOR);
+                        output.accept(ModBlocks.LEAD_LAMP);
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_COMBAT_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_combat_tab",
@@ -70,6 +71,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.LEAD_CHESTPLATE);
                         output.accept(ModItems.LEAD_LEGGINGS);
                         output.accept(ModItems.LEAD_BOOTS);
+                        output.accept(ModItems.LEAD_HORSE_ARMOR);
                     }).build());
 
     public static final Supplier<CreativeModeTab> RANDOMSTUFFMOD_TOOLS_TAB = CREATIVE_MODE_TABS.register("randomstuffmod_tools_tab",

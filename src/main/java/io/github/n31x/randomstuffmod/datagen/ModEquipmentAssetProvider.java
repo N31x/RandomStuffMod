@@ -27,6 +27,8 @@ public class ModEquipmentAssetProvider implements DataProvider {
     private static void bootstrap(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentClientInfo> output) {
         output.accept(ModArmorMaterials.LEAD_KEY, EquipmentClientInfo.builder()
                 .addHumanoidLayers(Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "lead"), false)
+                .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY,
+                        new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "lead")))
                 .build());
     }
 

@@ -28,6 +28,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.LEAD_FENCE_GATE.get());
         dropSelf(ModBlocks.LEAD_WALL.get());
         dropSelf(ModBlocks.LEAD_TRAPDOOR.get());
+        dropSelf(ModBlocks.LEAD_LAMP.get());
 
         add(ModBlocks.LEAD_DOOR.get(), this::createDoorTable);
 

@@ -61,6 +61,10 @@ public class ModItems {
     public static final DeferredItem<Item> LEAD_BOOTS = ITEMS.registerItem("lead_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.LEAD_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
+    public static final DeferredItem<Item> LEAD_HORSE_ARMOR = ITEMS.registerItem("lead_horse_armor",
+            properties -> new Item(properties.horseArmor(ModArmorMaterials.LEAD_ARMOR_MATERIAL)));
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
