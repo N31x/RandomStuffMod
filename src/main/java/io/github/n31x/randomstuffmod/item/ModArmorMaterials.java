@@ -10,13 +10,12 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.EquipmentAsset;
+import net.minecraft.world.item.equipment.EquipmentAssets;
 
 import java.util.Map;
 
 public class ModArmorMaterials {
-    public static final ResourceKey<? extends Registry<EquipmentAsset>> ROOT_ID = ResourceKey.createRegistryKey(Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "equipment_asset"));
-
-    public static final ResourceKey<EquipmentAsset> LEAD_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "lead"));
+    public static final ResourceKey<EquipmentAsset> LEAD_KEY = ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID,"lead"));
 
     public static final ArmorMaterial LEAD_ARMOR_MATERIAL = new ArmorMaterial(24, makeDefense(
             2, 5,7, 2, 8), 10, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.0F,
