@@ -2,6 +2,7 @@ package io.github.n31x.randomstuffmod;
 
 import io.github.n31x.randomstuffmod.block.ModBlocks;
 import io.github.n31x.randomstuffmod.creativemodetab.ModCreativeModeTabs;
+import io.github.n31x.randomstuffmod.data.ModDataComponents;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -52,6 +53,7 @@ public class RandomStuffMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModDataComponents.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (RandomStuffMod) to respond directly to events.

@@ -2,6 +2,7 @@ package io.github.n31x.randomstuffmod.item;
 
 import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.food.ModFoods;
+import io.github.n31x.randomstuffmod.item.custom.DataTabletItem;
 import io.github.n31x.randomstuffmod.item.custom.MetalDetectorItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
@@ -24,6 +25,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> METAL_DETECTOR = ITEMS.registerItem("metal_detector",
             properties -> new MetalDetectorItem(properties.durability(64)));
+
+    public static final DeferredItem<Item> DATA_TABLET = ITEMS.registerItem("data_tablet",
+            properties -> new DataTabletItem(properties.stacksTo(1)));
 
     public static final DeferredItem<Item> CORN = ITEMS.registerItem("corn",
             properties -> new Item(properties.food(ModFoods.CORN, ModFoods.CORN_CONSUMABLE)) {

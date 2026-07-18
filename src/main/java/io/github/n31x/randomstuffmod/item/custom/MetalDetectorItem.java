@@ -1,5 +1,7 @@
 package io.github.n31x.randomstuffmod.item.custom;
 
+import io.github.n31x.randomstuffmod.data.ModDataComponents;
+import io.github.n31x.randomstuffmod.item.ModItems;
 import io.github.n31x.randomstuffmod.tags.ModTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -48,6 +50,8 @@ public class MetalDetectorItem extends Item {
 
                     spawnFoundParticles(level, blockPos, blockState);
 
+                    addDataToDataTablet(player, blockPos.below(i), blockState);
+
                     break;
                 }
             }
@@ -59,6 +63,16 @@ public class MetalDetectorItem extends Item {
         }
 
         return InteractionResult.SUCCESS;
+    }
+
+    private void addDataToDataTablet(Player player, BlockPos pos, BlockState blockState) {
+        int slotIndex = player.getInventory().findSlotMatchingItem(new ItemStack(ModItems.DATA_TABLET.get()));
+        if(slotIndex == -1) {
+            return;
+        }
+        ItemStack dataTablet = player.getInventory().getItem(slotIndex);
+        dataTablet.set(ModDataComponents.COORDINATES, pos);
+        dataTablet.set(ModDataComponents.BLOCK, blockState);
     }
 
     private void spawnFoundParticles(Level level, BlockPos blockPos, BlockState blockState) {

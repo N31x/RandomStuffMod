@@ -4,17 +4,21 @@ import io.github.n31x.randomstuffmod.RandomStuffMod;
 import io.github.n31x.randomstuffmod.RandomStuffModDataGen;
 import io.github.n31x.randomstuffmod.block.ModBlocks;
 import io.github.n31x.randomstuffmod.block.custom.LeadLampBlock;
+import io.github.n31x.randomstuffmod.data.ModDataComponents;
 import io.github.n31x.randomstuffmod.item.ModArmorMaterials;
 import io.github.n31x.randomstuffmod.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.client.data.models.model.ModelTemplate;
-import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
-import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.data.models.model.*;
+import net.minecraft.client.renderer.item.ClientItem;
+import net.minecraft.client.renderer.item.ConditionalItemModel;
+import net.minecraft.client.renderer.item.ItemModel;
+import net.minecraft.client.renderer.item.properties.conditional.HasComponent;
 import net.minecraft.data.PackOutput;
+
+import java.util.Optional;
 
 public class ModModelProvider extends ModelProvider {
     public ModModelProvider(PackOutput output) {
@@ -46,6 +50,11 @@ public class ModModelProvider extends ModelProvider {
 
         itemModels.generateFlatItem(ModItems.LEAD_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
 
+        ItemModel.Unbaked unbakedDataTablet = ItemModelUtils.plainModel(itemModels.createFlatItemModel(ModItems.DATA_TABLET.get(), ModelTemplates.FLAT_ITEM));
+        ItemModel.Unbaked unbakedDataTabletOn = ItemModelUtils.plainModel(itemModels.createFlatItemModel(ModItems.DATA_TABLET.get(), "_on", ModelTemplates.FLAT_ITEM));
+        itemModels.itemModelOutput.register(ModItems.DATA_TABLET.get(),
+                new ClientItem(new ConditionalItemModel.Unbaked(Optional.empty(), new HasComponent(ModDataComponents.COORDINATES.get(), false),
+                        unbakedDataTabletOn, unbakedDataTablet), new ClientItem.Properties(false, false, 1f)));
 
 
         /* BLOCKS */
