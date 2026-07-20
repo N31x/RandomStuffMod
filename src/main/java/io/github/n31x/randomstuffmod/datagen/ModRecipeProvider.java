@@ -186,6 +186,18 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .group("lead")
                 .save(output);
+        shaped(RecipeCategory.COMBAT, ModItems.LEAD_BOW.get())
+                .pattern(" Ss")
+                .pattern("L s")
+                .pattern(" Ss")
+                .define('L', ModItems.LEAD_INGOT.get())
+                .define('S', Items.STICK)
+                .define('s', Items.STRING)
+                .unlockedBy(getHasName(ModItems.LEAD_INGOT.get()), has(ModItems.LEAD_INGOT))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                .group("lead")
+                .save(output);
         shaped(RecipeCategory.COMBAT, ModItems.LEAD_SPEAR.get())
                 .pattern("  L")
                 .pattern(" S ")

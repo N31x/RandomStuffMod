@@ -56,6 +56,9 @@ public class ModModelProvider extends ModelProvider {
                 new ClientItem(new ConditionalItemModel.Unbaked(Optional.empty(), new HasComponent(ModDataComponents.COORDINATES.get(), false),
                         unbakedDataTabletOn, unbakedDataTablet), new ClientItem.Properties(false, false, 1f)));
 
+        itemModels.createFlatItemModel(ModItems.LEAD_BOW.get(), ModelTemplates.BOW);
+        itemModels.generateBow(ModItems.LEAD_BOW.get());
+
 
         /* BLOCKS */
         blockModels.createTrivialCube(ModBlocks.RAW_LEAD_BLOCK.get());

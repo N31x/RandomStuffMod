@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "lead",
+  "key": {
+    "L": "randomstuffmod:lead_ingot",
+    "S": "minecraft:stick",
+    "s": "minecraft:string"
+  },
+  "pattern": [
+    " Ss",
+    "L s",
+    " Ss"
+  ],
+  "result": {
+    "id": "randomstuffmod:lead_bow"
+  }
+}

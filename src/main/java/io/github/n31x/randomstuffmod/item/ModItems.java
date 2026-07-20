@@ -54,6 +54,8 @@ public class ModItems {
     public static final DeferredItem<Item> LEAD_SPEAR = ITEMS.registerItem("lead_spear",
             properties -> new Item(properties.spear(ModToolTiers.LEAD, 1.0f, 1.025f, 0.55f,
                     2.5f, 10.5f, 6.6f, 5.1f, 10.5f, 4.6f)));
+    public static final DeferredItem<Item> LEAD_BOW = ITEMS.registerItem("lead_bow",
+            properties -> new BowItem(properties.durability(464).enchantable(1)));
 
 
     public static final DeferredItem<Item> LEAD_HELMET = ITEMS.registerItem("lead_helmet",

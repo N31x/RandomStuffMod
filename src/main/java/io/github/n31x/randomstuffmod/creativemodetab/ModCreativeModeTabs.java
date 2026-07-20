@@ -67,6 +67,7 @@ public class ModCreativeModeTabs {
                     .withTabsAfter(Identifier.fromNamespaceAndPath(RandomStuffMod.MOD_ID, "randomstuffmod_tools_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LEAD_SWORD);
+                        output.accept(ModItems.LEAD_BOW);
                         output.accept(ModItems.LEAD_SPEAR);
                         output.accept(ModItems.LEAD_HELMET);
                         output.accept(ModItems.LEAD_CHESTPLATE);

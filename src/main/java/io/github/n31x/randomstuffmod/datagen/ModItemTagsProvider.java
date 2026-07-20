@@ -28,6 +28,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         tag(ItemTags.SWORDS)
                 .add(ModItems.LEAD_SWORD.get());
+        tag(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.LEAD_BOW.get());
         tag(ItemTags.PICKAXES)
                 .add(ModItems.LEAD_PICKAXE.get());
         tag(ItemTags.AXES)
